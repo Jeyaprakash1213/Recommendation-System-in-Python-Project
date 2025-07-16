@@ -46,7 +46,7 @@ n_users = ratings['userId'].nunique()
 print(f"Average ratings per user: {round(n_ratings/n_users, 2)}")
 ```
 📸 Screenshot
-![Stats](images/statistics_output.png)
+![Stats](Screenshots/3.png)
 
 ---
  2. User Rating Frequency
@@ -57,9 +57,6 @@ user_freq = ratings.groupby('userId')['movieId'].count().reset_index()
 user_freq.columns = ['userId', 'n_ratings']
 print(user_freq.head())
 ```
-📸 Screenshot
-![User Frequency](images/user_rating_frequency.png)
-
 ---
 3. Best & Worst Rated Movies
 
@@ -73,7 +70,7 @@ lowest_rated = mean_rating.idxmin()
 movies.loc[movies['movieId'] == highest_rated]
 ```
 📸 Screenshot
-![Movie Ratings](images/movie_rating_analysis.png)
+![Movie Ratings](Screenshots/4.png)
 
 ---
 🧱 Building the User-Item Matrix
@@ -136,7 +133,7 @@ recommend_movies_for_user(user_id=150, X=X, k=10)
 ```
 
 📸 Output
-![Recommendations](images/user_recommendation_output.png)
+![Recommendations](Screenshots/5.png)
 
 ---
  🧪 How to Run
